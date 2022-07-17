@@ -1,0 +1,134 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"),
+      url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@import "normalize";
+@import "fonts";
+@import "_vars";
+@import "_global";
+
+.header {
+}
+.header__top {
+}
+.container {
+}
+.header__top-inner {
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  align-items: center;
+}
+.header__logo {
+}
+.header__text {
+  margin-left: auto;
+  margin-right: 25px;
+  span {
+    color: $red;
+  }
+}
+.header__phone {
+}
+.header__box {
+}
+.basket {
+}
+.header__btn {
+  padding: 4px;
+  width: 72px;
+  border-radius: 4px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 12px;
+}
+.regheader__btn-log {
+  background-color: $green;
+}
+.header__btn-reg {
+  background-color: $red;
+  margin-left: 7px;
+}
+.header__menu {
+  background-color: $bg;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+.menu__list {
+  li {
+    display: inline-block;
+    & + li {
+      margin-left: 30px;
+    }
+    a {
+      color: #ffffff;
+      font-size: 14px;
+    }
+  }
+}
+.search {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 533px;
+}
+.search__inner {
+  padding: 155px 0 100px;
+  color: #ffffff;
+  text-align: center;
+  &-title {
+    margin-bottom: 10px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 72px;
+  }
+  &-text {
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+  &-form {
+    max-width: 670px;
+    // width: 100%;
+    margin: 0 auto;
+    position: relative;
+    input {
+      display: block;
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: 0px 1px 10px 0px rgba(124, 178, 64, 0.75);
+      height: 56px;
+      color: $bg;
+      border: none;
+      outline: none;
+      font-style: 14px;
+      font-weight: 500;
+      padding-left: 25px;
+      padding-right: 60px;
+      &::placeholder {
+        color: #90a4ae;
+        font-weight: 500;
+      }
+    }
+    button {
+      position: absolute;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      top: 18px;
+      right: 16px;
+      cursor: pointer;
+    }
+  }
+}
