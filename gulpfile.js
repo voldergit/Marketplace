@@ -38,7 +38,8 @@ let { src, dest } = require("gulp"),
   clean_css = require("gulp-clean-css"),
   rename = require("gulp-rename"),
   ttf2woff = require("gulp-ttf2woff"),
-  ttf2woff2 = require("gulp-ttf2woff2");
+  ttf2woff2 = require("gulp-ttf2woff2"),
+  uglify = require("gulp-uglify-es").default;
 
 function browserSync() {
   browsersync.init({
@@ -88,6 +89,20 @@ function images() {
     .pipe(browsersync.stream());
 }
 
+function js() {
+  return src([path.src.js, "node_modules/mixitup/dist/mixitup.js"])
+    .pipe(fileinclude())
+    .pipe(dest(path.build.js))
+    .pipe(uglify())
+    .pipe(
+      rename({
+        extname: ".min.js",
+      })
+    )
+    .pipe(dest(path.build.js))
+    .pipe(browsersync.stream());
+}
+
 function fonts() {
   src(path.src.fonts).pipe(ttf2woff()).pipe(dest(path.build.fonts));
   return src(path.src.fonts).pipe(ttf2woff2()).pipe(dest(path.build.fonts));
@@ -126,15 +141,21 @@ function cb() {}
 function watchFiles() {
   gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.css], css);
+  gulp.watch([path.watch.js], js);
 }
 
 function clean() {
   return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(images, css, html, fonts), fontsStyle);
+let build = gulp.series(
+  clean,
+  gulp.parallel(js, images, css, html, fonts),
+  fontsStyle
+);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+exports.js = js;
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.html = html;
