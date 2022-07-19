@@ -460,6 +460,11 @@ body {
   margin-bottom: 3px;
 }
 
+.rate-star {
+  display: inline-block;
+  margin-right: 13px;
+}
+
 .header__top-inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -741,6 +746,14 @@ body {
   font-weight: 500;
 }
 
+.product__item-star {
+  font-size: 12px;
+}
+
+.product__item-star span {
+  color: #263238;
+}
+
 .product__bottom-btn {
   text-align: center;
 }
@@ -760,6 +773,199 @@ body {
   background-color: #e74c3c;
   color: #ffffff;
   outline: none;
+}
+
+.product-slider {
+  padding: 110px 0 120px;
+}
+
+.product-slider .slick-dots {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.product-slider .slick-dots li {
+  display: inline-block;
+  min-width: 3px;
+  margin-right: 3px;
+}
+
+.product-slider .slick-dots li.slick-active button {
+  background-color: #8bc34a;
+}
+
+.product-slider .slick-dots li button {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-color: #e8e8e8;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.capabilities {
+  background-color: #263238;
+  padding: 110px 0;
+}
+
+.capabilities__title {
+  color: #ffffff;
+  margin-bottom: 85px;
+}
+
+.capabilities__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.capabilities__item {
+  max-width: 370px;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.capabilities__item:hover .capabilities__item-image {
+  background-color: #8bc34a;
+}
+
+.capabilities__item:hover .capabilities__item-image path {
+  fill: #ffffff;
+}
+
+.capabilities__item:hover .capabilities__item-title {
+  color: #8bc34a;
+}
+
+.capabilities__item-image {
+  width: 114px;
+  height: 114px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 auto 30px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.capabilities__item-image svg {
+  height: 75px;
+}
+
+.capabilities__item-title {
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 500;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.capabilities__item-text {
+  font-size: 15px;
+  color: #b0bec5;
+}
+
+.author {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 750px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.author__box {
+  max-width: 650px;
+  width: 100%;
+  min-height: 215px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #8bc34a;
+}
+
+.author__title {
+  font-size: 30px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-right: 45px;
+  max-width: 260px;
+}
+
+.author__title span {
+  font-weight: 700;
+}
+
+.author__link {
+  font-size: 18px;
+  line-height: 36px;
+  padding: 14px 40px;
+  background-color: #ffffff;
+}
+
+.tutorial {
+  padding: 70px 0 120px;
+}
+
+.tutorial__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.tutorial__item {
+  min-width: 370px;
+}
+
+.tutorial__item-image {
+  min-height: 270px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tutorial__item-title {
+  background-color: #f8f8f8;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 700;
+  padding: 30px 10px;
+  color: #263238;
 }
 
 @media (max-width: 720px) {
