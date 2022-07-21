@@ -1,3 +1,52 @@
 @include font("Roboto", "Roboto-Regular", "400", "normal");
 @include font("Roboto", "Roboto-Medium", "500", "normal");
 @include font("Roboto", "Roboto-Bold", "700", "normal");
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?957kt");
+  src: url("../fonts/icomoon.eot?957kt#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?957kt") format("truetype"),
+    url("../fonts/icomoon.woff?957kt") format("woff"),
+    url("../fonts/icomoon.svg?957kt#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-angle-right:before {
+  content: "\e902";
+}
+.icon-shopping-cart:before {
+  content: "\e903";
+}
+.icon-location-arrow:before {
+  content: "\e900";
+}
+.icon-bolt:before {
+  content: "\e901";
+}
+.icon-flash:before {
+  content: "\e901";
+}
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-location:before {
+  content: "\e947";
+}
