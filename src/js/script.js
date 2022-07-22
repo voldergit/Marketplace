@@ -18,8 +18,20 @@ $(function () {
     type: "double",
     min: 0,
     max: 1000,
-    from: 200,
-    to: 500,
-    grid: true,
+    from: 0,
+    to: 600,
+    prefix: "$",
+    // grid: true,
+  });
+
+  $(".icon-th-list").on("click", function () {
+    $(".cards-sort").addClass("list");
+    $(".icon-th-list").addClass("active");
+    $(".icon-th-large").removeClass("active");
+  });
+  $(".icon-th-large").on("click", function () {
+    $(".cards-sort").removeClass("list");
+    $(".icon-th-large").addClass("active");
+    $(".icon-th-list").removeClass("active");
   });
 });

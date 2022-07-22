@@ -29,6 +29,27 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-heart-o:before {
+  content: "\e90a";
+}
+.icon-comment-o:before {
+  content: "\e909";
+}
+.icon-sort-amount-desc:before {
+  content: "\e907";
+}
+.icon-sort:before {
+  content: "\e908";
+}
+.icon-th-list:before {
+  content: "\e904";
+}
+.icon-th-large:before {
+  content: "\e905";
+}
+.icon-search:before {
+  content: "\e906";
+}
 .icon-angle-right:before {
   content: "\e902";
 }
